@@ -1,0 +1,136 @@
+:root {
+    --bg-dark: #0f1115;
+    --panel-bg: #161920;
+    --accent-blue: #3b82f6;
+    --accent-red: #ef4444;
+    --text-main: #f3f4f6;
+    --text-muted: #9ca3af;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.trainer-container {
+    width: 800px;
+    height: 500px;
+    background-color: var(--panel-bg);
+    border: 1px solid #242936;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+}
+
+.screen.active {
+    display: flex;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 12px 36px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid #374151;
+    color: var(--text-muted);
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background: #242936;
+    color: var(--text-main);
+}
+
+.hud {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #242936;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-weight: 500;
+}
+
+#target-area {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    cursor: crosshair;
+}
+
+#target {
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-red);
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    transform: translate(-50%, -50%);
+}
+
+.footer-link {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.footer-link a {
+    color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+}
