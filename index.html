@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Aim Trainer Component</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="trainer-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>AIM TRAINER CORE</h1>
+            <p>Test your reaction speed and tracking accuracy.</p>
+            <button id="btn-play" class="btn-primary">PLAY NOW</button>
+            <div class="footer-link">
+                Powered by <a href="https://aimtrainerpro.online" target="_blank">Aim Trainer Pro</a>
+            </div>
+        </div>
+
+        <!-- Gameplay Screen -->
+        <div id="game-screen" class="screen">
+            <div class="hud">
+                <div>Score: <span id="score-val">0</span></div>
+                <div>Time: <span id="timer-val">30</span>s</div>
+                <button id="btn-exit" class="btn-secondary">EXIT (ESC)</button>
+            </div>
+            <div id="target-area">
+                <div id="target"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
